@@ -59,7 +59,7 @@ const login = () => {
     if (!passwordRegex.test(password)) {
         return alert('Password must be at least 6 characters, include a number and a capital letter.')
     }
-    const user = users.find(u =>  u.password == password)
+    const user = users.find(u => u.email == email  &&  u.password == password )
     console.log(user)
     if (user) {
         localStorage.setItem("currentUser", JSON.stringify(user));
