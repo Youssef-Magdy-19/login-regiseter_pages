@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- stylesheet link -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/all.css">
+    <!-- Tilwind Link -->
+    <Script src="https://cdn.tailwindcss.com"></Script>
+    <!-- title -->
+    <title>Login & Registe Page</title>
+</head>
+
+<body>
+    <section class="h-[100vh] flex flex-col items-center justify-center px-[15px]">
+        <div
+            class="container bg-white  w-[768px] min-h-[600px] md:min-h-[480px] max-w-full m-auto rounded-2xl relative overflow-hidden  shadow-[0_5px_15px_rgba(0,0,0,0.35)]">
+            <div class="flex items-center">
+                <!-- form sign in || login -->
+                <form
+                    class="SignIn-form left-0 text-center flex flex-col items-center justify-center py-[40px] px-[15px] h-[70%] md:h-full w-full md:w-[50%]">
+                    <h2 class="font-[700] text-3xl mb-[10px]">Sign In</h2>
+                    <div class="socialIcons flex gap-[.5rem] mb-[10px]">
+                        <div
+                            class="google cursor-pointer flex items-center justify-center h-[40px] w-[40px] rounded border border-gray-500/30">
+                            <i class="text-[14px] fa-brands fa-google-plus-g"></i>
+                        </div>
+                        <div
+                            class="facebook cursor-pointer flex items-center justify-center h-[40px] w-[40px] rounded border border-gray-500/30">
+                            <i class="text-[14px] fa-brands fa-facebook-f"></i>
+                        </div>
+                        <div
+                            class="github cursor-pointer flex items-center justify-center h-[40px] w-[40px] rounded border border-gray-500/30">
+                            <i class="text-[14px] fa-brands fa-github"></i>
+                        </div>
+                        <div
+                            class="linkedin cursor-pointer flex items-center justify-center h-[40px] w-[40px] rounded border border-gray-300">
+                            <i class="text-[14px] fa-brands fa-linkedin-in"></i>
+                        </div>
+                    </div>
+                    <span class="text-[14px]">or use your email password</span>
+                    <div class="inputs flex flex-col w-full px-[10px]">
+                        <input type="email" placeholder="Email" required autocomplete="off"
+                            class="email-signIn rounded-[8px] py-[7.5px] px-[15px] my-[10px] border-0 outline-0 bg-[#eee] text-[13px]">
+                        <input type="password" placeholder="Password" required 
+                            class="password-signIn rounded-[8px] py-[7.5px] px-[15px] border-0 outline-0 bg-[#eee] text-[13px]">
+                    </div>
+                    <p class="my-[10px]">Forget Your Password</p>
+                    <p  onclick="login()"
+                        class="signIn-btn cursor-pointer text-white border-0 text-[12px] font-semibold rounded-[8px] py-[7.5px] px-[40px]">SIGN
+                        IN</p>
+                </form>
+                <!-- form sign up || register -->
+                <form
+                    class="SignUp-form absolute left-0 text-center flex flex-col items-center justify-center py-[40px] px-[15px]  md:h-full w-full md:w-[50%]">
+                    <h2 class="font-[700] text-3xl mb-[10px]">Sign Up</h2>
+                    <div class="socialIcons flex gap-[.5rem] mb-[10px]">
+                        <div
+                            class="google cursor-pointer flex items-center justify-center h-[30px] w-[30px] rounded border border-gray-500/30">
+                            <i class="text-[14px] fa-brands fa-google-plus-g"></i>
+                        </div>
+                        <div
+                            class="facebook cursor-pointer flex items-center justify-center h-[30px] w-[30px] rounded border border-gray-500/30">
+                            <i class="text-[14px] fa-brands fa-facebook-f"></i>
+                        </div>
+                        <div
+                            class="github cursor-pointer flex items-center justify-center h-[30px] w-[30px] rounded border border-gray-500/30">
+                            <i class="text-[14px] fa-brands fa-github"></i>
+                        </div>
+                        <div
+                            class="linkedin cursor-pointer flex items-center justify-center h-[30px] w-[30px] rounded border border-gray-300">
+                            <i class="text-[14px] fa-brands fa-linkedin-in"></i>
+                        </div>
+                    </div>
+                    <span class="text-[14px] mb-[10px]">or use your email password</span>
+                    <div class="inputs flex flex-col w-full px-[10px] gap-[10px]">
+                        <input type="text" placeholder="Name" required autocomplete="off"
+                            class="name-signUp rounded-[8px] py-[7.5px] px-[15px] border-0 outline-0 bg-[#eee] text-[13px]">
+                        <input type="email" placeholder="Email" required autocomplete="off"
+                            class="email-signUp rounded-[8px] py-[7.5px] px-[15px] border-0 outline-0 bg-[#eee] text-[13px]">
+                        <input type="password" placeholder="Password" required
+                            class="password-signUp rounded-[8px] py-[7.5px] px-[15px] border-0 outline-0 bg-[#eee] text-[13px]">
+                    </div>
+                    <p class="my-[10px]">Forget Your Password</p>
+                    <p onclick="register()"
+                        class="signUp-btn text-white border-0 text-[12px] font-semibold rounded-[8px] py-[7.5px] px-[40px] cursor-pointer">SIGN
+                        Up</p>
+                </form>
+
+            </div>
+            <div class="toggle-container absolute top-0 w-[100%] md:left-[50%] md:w-[50%] h-[40%] md:h-full overflow-hidden ">
+                <div class="toggle h-full relative left-[-100%] w-[200%] text-white">
+                    <div
+                        class="toggle-panel  toggle-left absolute top-0 px-[10px] md:p-[20px] lg:p-[30px] left-[25%] md:left-[0] w-[100%] md:w-[50%] h-full overflow-hidden text-center text-white flex flex-col items-center justify-center">
+                        <h2 class="text-3xl font-bold">Welcom Back!</h2>
+                        <p class="w-[300px] md:w-full">Enter your personal details to use all of site features</p>
+                        <button
+                            class="SignIn text-white py-[7.5px] px-[40px] rounded-[8px] text-[12px] font-semibold border border-white">SIGN
+                            Up</button>
+                    </div>
+                    <div
+                        class="toggle-panel toggle-right  absolute top-0 px-[10px] md:p-[20px] lg:p-[30px] left-[25%] md:left-[50%] w-[100%] md:w-[50%] h-full overflow-hidden text-center text-white flex flex-col items-center justify-center">
+                        <h2 class="text-3xl font-bold">Hello, Friend!</h2>
+                        <p class="w-[300px] md:w-full">Register with your personal details to use all of site features</p>
+                        <button 
+                            class="SignUp text-white py-[7.5px] px-[40px] rounded-[8px] text-[12px] font-semibold border border-white ">SIGN
+                            Up</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="javascript/script.js"></script>
+</body>
+
+</html>

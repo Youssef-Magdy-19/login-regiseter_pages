@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- stylesheet link -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/all.css">
+    <!-- Tilwind Link -->
+    <Script src="https://cdn.tailwindcss.com"></Script>
+    <!-- title -->
+    <title>Profile User</title>
+</head>
+
+<body>
+    <section class="flex items-center justify-center min-h-screen">
+        <div class="flex flex-col gap-[10px] items-center">
+            <p id="message" class="text-3xl font-semibold"></p>
+            <div id="welcome"></div>
+            <button onclick="handleLogout()"
+                class="bg-[#512da8] text-white border border-gray-300 text-[12px] font-semibold rounded-[8px] py-[7.5px] px-[40px] cursor-pointer">Sign
+                Out</button>
+        </div>
+    </section>
+
+    <script>
+        const user = JSON.parse(localStorage.getItem('currentUser'))
+        if (user) {
+            document.getElementById("message").style.color = "green";
+            document.getElementById("message").textContent = `Welcome, ${user.name} !`;
+        } else {
+            window.location.href = '/index.html'
+        }
+
+        const handleLogout = () => {
+            localStorage.removeItem('currentUser')
+            window.location.href = '/index.html'
+        }
+    </script>
+</body>
+
+</html>
