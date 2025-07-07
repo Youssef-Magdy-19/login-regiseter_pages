@@ -170,6 +170,7 @@ form {
 
     .toggle-left {
         transform: translateY(110%);
+        /* z-index: 1 !important; */
     }
 
     .container.active .toggle-left {
