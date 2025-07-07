@@ -26,7 +26,8 @@ body {
     margin: 15px 0 10px;
 }
 
-.signUp-btn , .signIn-btn {
+.signUp-btn,
+.signIn-btn {
     background-color: #512da8;
 }
 
@@ -128,29 +129,34 @@ form {
 
 /* Responsive */
 @media(max-width: 767px) {
-    form{
+    form {
         height: 65%;
     }
-    .SignIn-form{
+
+    .SignIn-form {
         margin-top: 215px;
     }
+
     .container.active .SignIn-form {
         transform: translateY(100%);
     }
 
+    .SignUp-form{
+        margin-top: 10px;
+    } 
     .container.active .SignUp-form {
         transform: translateY(0);
     }
 
     .toggle-container {
         border-radius: 0 0 30px 50px;
-        height: 240px;
     }
 
     .container.active .toggle-container {
-        height: 73%;
-        transform: translateY(37.5%);
+        height: 70%;
+        transform: translateY(43%);
         border-radius: 0px !important;
+        z-index: 1;
     }
 
     .toggle,
